@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Hello NexT]]></title>
     <url>%2F2019%2F02%2F27%2FHelloNexT%2F</url>
-    <content type="text"><![CDATA[安装当前目录为博客所在目录1git clone https://github.com/iissnan/hexo-theme-next themes/next NexTElegant Theme for Hexo]]></content>
+    <content type="text"><![CDATA[Theme NexT 安装当前目录为博客所在目录1git clone https://github.com/iissnan/hexo-theme-next themes/next NexTElegant Theme for Hexo]]></content>
       <categories>
         <category>Hello</category>
       </categories>
