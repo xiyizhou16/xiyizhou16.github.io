@@ -128,23 +128,31 @@
 
 
 
-  <meta name="description" content="Personal Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xiyizhou">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="缺点： 其做出的假设导致其不能考虑上下文的特征，限制了特征的选择  概念 马尔可夫模型：下一状态仅取决于当前状态，存在状态转移矩阵 隐马尔可夫模型：无法得知当前我想要的得知的状态（隐藏状态），但是可观察的状态与隐藏状态之间存在联系，根据可观察状态的序列找到一个最可能的隐藏状态序列 有限历史性假设 —— 下一状态仅取决于当前状态 齐次性假设 —— 状态转移概率与时刻无关 观察值独立性假设 —— 观察">
+<meta name="keywords" content="NLP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="隐马尔可夫模型">
+<meta property="og:url" content="http://yoursite.com/2019/02/28/HMM/index.html">
 <meta property="og:site_name" content="xiyizhou">
-<meta property="og:description" content="Personal Blog">
+<meta property="og:description" content="缺点： 其做出的假设导致其不能考虑上下文的特征，限制了特征的选择  概念 马尔可夫模型：下一状态仅取决于当前状态，存在状态转移矩阵 隐马尔可夫模型：无法得知当前我想要的得知的状态（隐藏状态），但是可观察的状态与隐藏状态之间存在联系，根据可观察状态的序列找到一个最可能的隐藏状态序列 有限历史性假设 —— 下一状态仅取决于当前状态 齐次性假设 —— 状态转移概率与时刻无关 观察值独立性假设 —— 观察">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://static.zybuluo.com/xiyizhou16/w5t09rg451oml2a0vhezynpj/image_1d4po9p0s59215nfek21mb1h1kg.png">
+<meta property="og:image" content="http://static.zybuluo.com/xiyizhou16/pg668x4020o6225v2hvcf1p2/image_1d4pob6ti15uo10ib1rjd1aorrt0t.png">
+<meta property="og:image" content="http://static.zybuluo.com/xiyizhou16/yeidbozigxikqymvo3xf9lhx/image_1d4podbpk132u4181ue1cnlaup1a.png">
+<meta property="og:image" content="http://static.zybuluo.com/xiyizhou16/552z0osze6idqyu5340o0oj6/image_1d4ppf6j01p67drc15qprbtoqo27.png">
+<meta property="og:image" content="http://static.zybuluo.com/xiyizhou16/7q308qex2uidollrz07fmqcb/image_1d4ppgeehgvu161791spb11i13k.png">
+<meta property="og:updated_time" content="2019-02-28T10:24:42.494Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xiyizhou">
-<meta name="twitter:description" content="Personal Blog">
+<meta name="twitter:title" content="隐马尔可夫模型">
+<meta name="twitter:description" content="缺点： 其做出的假设导致其不能考虑上下文的特征，限制了特征的选择  概念 马尔可夫模型：下一状态仅取决于当前状态，存在状态转移矩阵 隐马尔可夫模型：无法得知当前我想要的得知的状态（隐藏状态），但是可观察的状态与隐藏状态之间存在联系，根据可观察状态的序列找到一个最可能的隐藏状态序列 有限历史性假设 —— 下一状态仅取决于当前状态 齐次性假设 —— 状态转移概率与时刻无关 观察值独立性假设 —— 观察">
+<meta name="twitter:image" content="http://static.zybuluo.com/xiyizhou16/w5t09rg451oml2a0vhezynpj/image_1d4po9p0s59215nfek21mb1h1kg.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/28/HMM/">
 
 
 
@@ -154,7 +162,7 @@
   };
 </script>
 
-  <title>xiyizhou</title>
+  <title>隐马尔可夫模型 | xiyizhou</title>
   
 
 
@@ -202,8 +210,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -241,7 +248,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -366,9 +373,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -400,10 +407,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/28/HMM/" class="post-title-link" itemprop="url">隐马尔可夫模型</a>
+          <h1 class="post-title" itemprop="name headline">隐马尔可夫模型
+
               
             
           </h1>
@@ -474,6 +479,13 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
           
 
@@ -492,9 +504,7 @@
       
 
       
-        
-          
-            <h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><ul>
+        <h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><ul>
 <li>其做出的假设导致其不能考虑上下文的特征，限制了特征的选择</li>
 </ul>
 <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>
@@ -532,8 +542,6 @@
 </li>
 </ul>
 
-          
-        
       
     </div>
 
@@ -554,372 +562,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/HelloNexT/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiyizhou16">
-      <meta itemprop="description" content="Personal Blog">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="xiyizhou">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/27/HelloNexT/" class="post-title-link" itemprop="url">Hello NexT</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-02-27 19:46:22" itemprop="dateCreated datePublished" datetime="2019-02-27T19:46:22+08:00">2019-02-27</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-02-28 13:38:57" itemprop="dateModified" datetime="2019-02-28T13:38:57+08:00">2019-02-28</time>
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hello/" itemprop="url" rel="index"><span itemprop="name">Hello</span></a></span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/NLP/" rel="tag"># NLP</a>
           
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p>Theme NexT<br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/02/27/HelloNexT/#more" rel="contents">
-                Read more &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/27/HelloNexT/" rel="next" title="Hello NexT">
+                <i class="fa fa-chevron-left"></i> Hello NexT
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </p></div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiyizhou16">
-      <meta itemprop="description" content="Personal Blog">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="xiyizhou">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/27/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
             
-          </h1>
-        
+          </div>
 
-        <div class="post-meta">
-          <span class="post-time">
+          <span class="post-nav-divider"></span>
 
+          <div class="post-nav-prev post-nav-item">
             
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-02-27 09:24:21" itemprop="dateCreated datePublished" datetime="2019-02-27T09:24:21+08:00">2019-02-27</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-02-28 09:59:46" itemprop="dateModified" datetime="2019-02-28T09:59:46+08:00">2019-02-28</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hello/" itemprop="url" rel="index"><span itemprop="name">Hello</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/02/27/hello-world/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </p></div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -929,14 +601,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -956,8 +629,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1031,6 +713,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点："><span class="nav-number">1.</span> <span class="nav-text">缺点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">2.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五元组"><span class="nav-number">3.</span> <span class="nav-text">五元组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Viterbi-算法"><span class="nav-number">4.</span> <span class="nav-text">Viterbi 算法</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1186,6 +885,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
 
   
 
@@ -1196,6 +899,8 @@
   
   
 
+
+  
 
 
   
@@ -1531,14 +1236,6 @@
   
 
   
-  
-    
-      
-    
-      
-    
-      
-    
   
 
   
