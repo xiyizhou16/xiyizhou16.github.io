@@ -141,7 +141,7 @@
 <meta property="og:image" content="http://static.zybuluo.com/xiyizhou16/yeidbozigxikqymvo3xf9lhx/image_1d4podbpk132u4181ue1cnlaup1a.png">
 <meta property="og:image" content="http://static.zybuluo.com/xiyizhou16/552z0osze6idqyu5340o0oj6/image_1d4ppf6j01p67drc15qprbtoqo27.png">
 <meta property="og:image" content="http://static.zybuluo.com/xiyizhou16/7q308qex2uidollrz07fmqcb/image_1d4ppgeehgvu161791spb11i13k.png">
-<meta property="og:updated_time" content="2019-02-28T12:38:54.090Z">
+<meta property="og:updated_time" content="2019-03-01T04:14:44.394Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="隐马尔可夫模型">
 <meta name="twitter:description" content="隐马尔可夫模型 (Hidden Markov Model) 是统计模型，它用来描述一个含有隐含未知参数的马尔可夫过程。其状态并不是直接可见的，但受状态影响的某些变量则是可见的，自然语言处理中被应用于中文分词。">
@@ -433,12 +433,24 @@
                 
               
 
-              <time title="Created: 2019-02-28 17:43:17 / Modified: 20:38:54" itemprop="dateCreated datePublished" datetime="2019-02-28T17:43:17+08:00">2019-02-28</time>
+              <time title="Created: 2019-02-28 17:43:17" itemprop="dateCreated datePublished" datetime="2019-02-28T17:43:17+08:00">2019-02-28</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-01 12:14:44" itemprop="dateModified" datetime="2019-03-01T12:14:44+08:00">2019-03-01</time>
               
             
           </span>
@@ -525,8 +537,9 @@
 <li>观测概率矩阵－B：在在已知某一位置字的状态的条件下，观察值为特定字的概率<br><img src="http://static.zybuluo.com/xiyizhou16/yeidbozigxikqymvo3xf9lhx/image_1d4podbpk132u4181ue1cnlaup1a.png" alt="image_1d4podbpk132u4181ue1cnlaup1a.png-66kB"></li>
 </ul>
 <h3 id="Viterbi-算法"><a href="#Viterbi-算法" class="headerlink" title="Viterbi 算法"></a>Viterbi 算法</h3><p>需要做的工作：找到的最大的 <script type="math/tex">P(S_1, S_2, ... |\space O_1, O_2, ...)</script>，并认为其对应的状态为每个文字实际的状态</p>
-<script type="math/tex; mode=display">P(S_1, S_2, ... |\space O_1, O_2, ...) = P(O_1, O_2, ... |\space S_1, S_2, ...) * P(S_1, S_2, ...) / P(O_1, O_2, ...)</script><p>因而只需要比较 <script type="math/tex">P(O_1, O_2, ... |\space S_1, S_2, ...)* P(S_1, S_2, ...)</script><br>齐次性假设: 状态转移矩阵不变<br>观察值独立性假设: <script type="math/tex">P(O_1, O_2, ... |\space S_1, S_2, ...) = P(O_1 |\space S_1, S_2, ...) * P(O_2 |\space S_1, S_2, ...) * ... = P(O_1 | S_1) * P(O_2 | S_2) * ...</script><br>有限历史性假设: <script type="math/tex">P(S_1, S_2, ...) = P(S_1) * P(S_2 | S_1) * P(S_3 | S_1, S_2) * ... = P(S_1) * P(S_2 | S_1) * P(S_3 | S_2) * ...</script></p>
-<script type="math/tex; mode=display">P(O_1, O_2, ... |\space S_1, S_2, ...) * P(S_1, S_2, ...) = [P(O_1 | S_1) * P(S_1)] * [P(O_2 | S_2) * P(S_2 | S_1)] * [P(O_3 | S_3) * P(S_3 | S_2)] * ...</script><ul>
+<script type="math/tex; mode=display">P(S_1, S_2, ... |\space O_1, O_2, ...) = P(O_1, O_2, ... |\space S_1, S_2, ...) * P(S_1, S_2, ...) / P(O_1, O_2, ...)</script><p>因而只需要比较 <script type="math/tex">P(O_1, O_2, ... |\space S_1, S_2, ...)* P(S_1, S_2, ...)</script><br>齐次性假设: 状态转移矩阵不变<br>观察值独立性假设: </p>
+<script type="math/tex; mode=display">P(O_1, O_2, ... |\space S_1, S_2, ...) = P(O_1 |\space S_1, S_2, ...) * P(O_2 |\space S_1, S_2, ...) * ... = P(O_1 | S_1) * P(O_2 | S_2) * ...</script><p>有限历史性假设: </p>
+<script type="math/tex; mode=display">P(S_1, S_2, ...) = P(S_1) * P(S_2 | S_1) * P(S_3 | S_1, S_2) * ... = P(S_1) * P(S_2 | S_1) * P(S_3 | S_2) * ...</script><script type="math/tex; mode=display">P(O_1, O_2, ... |\space S_1, S_2, ...) * P(S_1, S_2, ...) = [P(O_1 | S_1) * P(S_1)] * [P(O_2 | S_2) * P(S_2 | S_1)] * [P(O_3 | S_3) * P(S_3 | S_2)] * ...</script><ul>
 <li>定义二维数组 weight[4][15]，4为状态的数量，15为输入句子的字数。</li>
 <li>使用初始状态概率向量初始化 weight[i][0]            <ul>
 <li>初始状态概率向量－π 已知</li>
@@ -857,7 +870,7 @@
     
     
   
-  <script color="0,0,255" opacity="0.5" zindex="-1" count="30" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="45" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 
