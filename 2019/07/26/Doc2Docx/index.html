@@ -128,24 +128,25 @@
 
 
 
-  <meta name="description" content="2019年 日常记录">
+  <meta name="description" content=".doc 文件批量转换为 .docx">
+<meta name="keywords" content="FileConvert">
 <meta property="og:type" content="article">
-<meta property="og:title" content="随笔2019">
-<meta property="og:url" content="http://yoursite.com/2019/02/28/随笔2019/index.html">
+<meta property="og:title" content="Doc2Docx">
+<meta property="og:url" content="http://yoursite.com/2019/07/26/Doc2Docx/index.html">
 <meta property="og:site_name" content="xiyizhou">
-<meta property="og:description" content="2019年 日常记录">
+<meta property="og:description" content=".doc 文件批量转换为 .docx">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-01T07:05:12.704Z">
+<meta property="og:updated_time" content="2019-07-26T08:04:19.124Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="随笔2019">
-<meta name="twitter:description" content="2019年 日常记录">
+<meta name="twitter:title" content="Doc2Docx">
+<meta name="twitter:description" content=".doc 文件批量转换为 .docx">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/28/随笔2019/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/26/Doc2Docx/">
 
 
 
@@ -155,7 +156,7 @@
   };
 </script>
 
-  <title>随笔2019 | xiyizhou</title>
+  <title>Doc2Docx | xiyizhou</title>
   
 
 
@@ -383,7 +384,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/28/随笔2019/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/26/Doc2Docx/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xiyizhou16">
@@ -400,7 +401,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">随笔2019
+          <h1 class="post-title" itemprop="name headline">Doc2Docx
 
               
             
@@ -426,46 +427,16 @@
                 
               
 
-              <time title="Created: 2019-02-28 21:42:52" itemprop="dateCreated datePublished" datetime="2019-02-28T21:42:52+08:00">2019-02-28</time>
+              <time title="Created: 2019-07-26 15:48:04 / Modified: 16:04:19" itemprop="dateCreated datePublished" datetime="2019-07-26T15:48:04+08:00">2019-07-26</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-06-01 15:05:12" itemprop="dateModified" datetime="2019-06-01T15:05:12+08:00">2019-06-01</time>
               
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随笔/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -502,97 +473,17 @@
       
 
       
-        <p><blockquote class="blockquote-center">2019年 日常记录</blockquote><br><a id="more"></a></p>
+        <p><blockquote class="blockquote-center">.doc 文件批量转换为 .docx</blockquote><br><a id="more"></a></p>
 <ul>
-<li>2019-2-28<ul>
-<li>初步设置好了个人博客</li>
-<li><a href="http://www.sunshangyu.top/2018/09/16/20180916-Hexo-Mathjax/#more" target="_blank" rel="noopener">关于 Latex 数学公式在 Hexo 中使用的参考</a></li>
-<li>即使使用了上述方法，行内公式只有使用行间公式的符号才正常显示，有悖于习惯与通用的 MarkDown 编辑器。并且转义仍存在 bug</li>
-</ul>
+<li>打开一个 word 能够打开的文件，按快捷键 <code>Alt + F11</code> 打开 Microsoft Visual Basic for Applications 窗口</li>
+<li>在应用窗口点击 <em>插入 &gt; 模块</em></li>
+<li>输入代码<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> ConvertDocToDocx()</span><br><span class="line">    <span class="keyword">Dim</span> xDlg <span class="keyword">As</span> FileDialog</span><br><span class="line">    Dim xFolder As Variant</span><br><span class="line">    <span class="keyword">Dim</span> xFileName <span class="keyword">As</span> <span class="built_in">String</span></span><br><span class="line">    Application.ScreenUpdating = <span class="literal">False</span></span><br><span class="line">    <span class="keyword">Set</span> xDlg = Application.FileDialog(msoFileDialogFolderPicker)</span><br><span class="line">    <span class="keyword">If</span> xDlg.Show &lt;&gt; <span class="number">-1</span> <span class="keyword">Then</span> <span class="keyword">Exit</span> <span class="keyword">Sub</span></span><br><span class="line">    xFolder = xDlg.SelectedItems(<span class="number">1</span>) + <span class="string">"\"</span></span><br><span class="line">    xFileName = Dir(xFolder &amp; <span class="string">"*.doc"</span>, vbNormal)</span><br><span class="line">    <span class="keyword">While</span> xFileName &lt;&gt; <span class="string">""</span></span><br><span class="line">        Documents.Open FileName:=xFolder &amp; xFileName, _</span><br><span class="line">            ConfirmConversions:=<span class="literal">False</span>, <span class="keyword">ReadOnly</span>:=<span class="literal">False</span>, AddToRecentFiles:=<span class="literal">False</span>, _</span><br><span class="line">            PasswordDocument:=<span class="string">""</span>, PasswordTemplate:=<span class="string">""</span>, Revert:=<span class="literal">False</span>, _</span><br><span class="line">            WritePasswordDocument:=<span class="string">""</span>, WritePasswordTemplate:=<span class="string">""</span>, Format:= _</span><br><span class="line">            wdOpenFormatAuto, XMLTransform:=<span class="string">""</span></span><br><span class="line">        ActiveDocument.SaveAs xFolder &amp; Replace(xFileName, <span class="string">"doc"</span>, <span class="string">"docx"</span>), wdFormatDocumentDefault</span><br><span class="line">        ActiveDocument.Close</span><br><span class="line">        xFileName = Dir()</span><br><span class="line">    Wend</span><br><span class="line">    Application.ScreenUpdating = <span class="literal">True</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>
+<blockquote>
+<p>来源：<a href="https://www.extendoffice.com/zh-CN/documents/word/5601-word-batch-convert-doc-to-docx.html" target="_blank" rel="noopener">extendOffice</a></p>
+</blockquote>
 
-<ul>
-<li>2019-3-7<ul>
-<li>更改 npm 全局安装目录<ul>
-<li><code>npm config set cache &quot;C:\Environment\JavaScript\NodePackages&quot;</code></li>
-<li><code>npm config set prefix &quot;C:\Environment\JavaScript\NodePackages&quot;</code></li>
-<li>修改 .\node_modules\npm 路径中的 npmrc 文件</li>
-<li>prefix=C:\Environment\JavaScript\NodePackages</li>
-<li>cache=C:\Environment\JavaScript\NodePackages</li>
-</ul>
-</li>
-<li>Tensorflow2.0 将要更新，接口会出现较大变动，最近 tensorflow 的程序跑起来时常看到 warning</li>
-<li>逐渐习惯了使用 vscode</li>
-</ul>
-</li>
-</ul>
-</p><p>
-
-<ul>
-<li>2019-3-9<ul>
-<li>不知道为什么，突然想到了很久之前看过的小说。幸运的是，很快就找到了。</li>
-<li><a href="https://www.douban.com/note/511993326/" target="_blank" rel="noopener">中国百科全书（四） 巴别乱</a></li>
-</ul>
-</li>
-</ul>
-</p><p>
-
-<ul>
-<li>2019-3-18<ul>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/learn/HTML" target="_blank" rel="noopener">MDN web docs</a></li>
-</ul>
-</li>
-</ul>
-</p><p>
-
-<ul>
-<li><p>2019-3-23</p>
-<ul>
-<li><p>selenium chrome 无界面</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.chrome.options <span class="keyword">import</span> Options</span><br><span class="line"></span><br><span class="line">chrome_options = Options()</span><br><span class="line">chrome_options.add_argument(<span class="string">'--headless'</span>)</span><br><span class="line">driver = webdriver.Chrome(options=chrome_options)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>tesserocr 安装</p>
-<ul>
-<li><p>Python 输入，注意输出列表的第一个元组，例: (‘cp37’, ‘cp37m’, ‘win_amd64’)</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pip._internal</span><br><span class="line">pip._internal.pep425tags.get_supported()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a href="https://github.com/simonflueckiger/tesserocr-windows_build/releases" target="_blank" rel="noopener">tesserocr下载</a>，从该网址下载与之前输出元组所对应的 .whl 文件</p>
-</li>
-<li><p>通过 pip 安装下载到本地的文件，例:<code>pip3 install tesserocr-2.4.0-cp37-cp37m-win_amd64.whl</code>，当前工作目录为文件所在的目录</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</p><p>
-
-<ul>
-<li>2019-4-2<ul>
-<li>pyquery 长时间未维护，对于 CSS4 中的伪类选择器语法支持不足(当然，也可能是因为当前流行的仍然为 CSS3，毕竟对于 CSS4 的语法浏览器没有足够的动力去支持，只要 HTML 结构足够好的话，CSS3 对于伪类选择器的语法支持个人感觉已经足够)。例如<code>:not(:has())</code>就没有添加支持，使得选择不含有特定元素的所有元素变成一件很困难的事情(对一个结构比较糟糕的网站使用 HTML 解析时，这个功能可能很重要)</li>
-<li>使用 BeautifulSoup 的选择器会是更好的选择，对于 CSS4 的语法支持较好</li>
-</ul>
-</li>
-</ul>
-</p><p>
-
-<ul>
-<li>2019-4-4<ul>
-<li><a href="https://www.biaodianfu.com/python-requests-encoding-problem.html" target="_blank" rel="noopener">python requests 编码问题</a></li>
-</ul>
-</li>
-</ul>
-</p><p>
-
-<ul>
-<li>2019-6-1<ul>
-<li><a href="https://mathiasbynens.be/notes/javascript-encoding" target="_blank" rel="noopener">JavaScript internal character encoding</a></li>
-</ul>
-</li>
-</ul>
-</p>
       
     </div>
 
@@ -613,6 +504,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/FileConvert/" rel="tag"># FileConvert</a>
+          
+        </div>
+      
 
       
       
@@ -622,8 +519,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/28/HMM/" rel="next" title="隐马尔可夫模型">
-                <i class="fa fa-chevron-left"></i> 隐马尔可夫模型
+              <a href="/2019/03/22/Scrapy/" rel="next" title="Scrapy">
+                <i class="fa fa-chevron-left"></i> Scrapy
               </a>
             
           </div>
@@ -631,10 +528,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/22/Scrapy/" rel="prev" title="Scrapy">
-                Scrapy <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

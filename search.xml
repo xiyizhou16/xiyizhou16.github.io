@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Doc2Docx]]></title>
+    <url>%2F2019%2F07%2F26%2FDoc2Docx%2F</url>
+    <content type="text"><![CDATA[.doc 文件批量转换为 .docx 打开一个 word 能够打开的文件，按快捷键 Alt + F11 打开 Microsoft Visual Basic for Applications 窗口 在应用窗口点击 插入 &gt; 模块 输入代码123456789101112131415161718192021Sub ConvertDocToDocx() Dim xDlg As FileDialog Dim xFolder As Variant Dim xFileName As String Application.ScreenUpdating = False Set xDlg = Application.FileDialog(msoFileDialogFolderPicker) If xDlg.Show &lt;&gt; -1 Then Exit Sub xFolder = xDlg.SelectedItems(1) + "\" xFileName = Dir(xFolder &amp; "*.doc", vbNormal) While xFileName &lt;&gt; "" Documents.Open FileName:=xFolder &amp; xFileName, _ ConfirmConversions:=False, ReadOnly:=False, AddToRecentFiles:=False, _ PasswordDocument:="", PasswordTemplate:="", Revert:=False, _ WritePasswordDocument:="", WritePasswordTemplate:="", Format:= _ wdOpenFormatAuto, XMLTransform:="" ActiveDocument.SaveAs xFolder &amp; Replace(xFileName, "doc", "docx"), wdFormatDocumentDefault ActiveDocument.Close xFileName = Dir() Wend Application.ScreenUpdating = TrueEnd Sub 来源：extendOffice]]></content>
+      <tags>
+        <tag>FileConvert</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Scrapy]]></title>
     <url>%2F2019%2F03%2F22%2FScrapy%2F</url>
     <content type="text"><![CDATA[]]></content>
