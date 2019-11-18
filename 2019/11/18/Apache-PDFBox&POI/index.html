@@ -128,24 +128,25 @@
 
 
 
-  <meta name="description" content="Theme NexT">
+  <meta name="description" content=".pdf 和 .docx 文件创建">
+<meta name="keywords" content="FileConvert">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello NexT">
-<meta property="og:url" content="http://yoursite.com/2019/02/27/HelloNexT/index.html">
+<meta property="og:title" content="Apache PDFBox &amp; POI">
+<meta property="og:url" content="http://yoursite.com/2019/11/18/Apache-PDFBox&POI/index.html">
 <meta property="og:site_name" content="xiyizhou">
-<meta property="og:description" content="Theme NexT">
+<meta property="og:description" content=".pdf 和 .docx 文件创建">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-02-28T05:38:57.780Z">
+<meta property="og:updated_time" content="2019-11-18T07:06:10.789Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello NexT">
-<meta name="twitter:description" content="Theme NexT">
+<meta name="twitter:title" content="Apache PDFBox &amp; POI">
+<meta name="twitter:description" content=".pdf 和 .docx 文件创建">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/27/HelloNexT/">
+  <link rel="canonical" href="http://yoursite.com/2019/11/18/Apache-PDFBox&POI/">
 
 
 
@@ -155,7 +156,7 @@
   };
 </script>
 
-  <title>Hello NexT | xiyizhou</title>
+  <title>Apache PDFBox & POI | xiyizhou</title>
   
 
 
@@ -383,7 +384,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/HelloNexT/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/18/Apache-PDFBox&POI/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xiyizhou16">
@@ -400,7 +401,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello NexT
+          <h1 class="post-title" itemprop="name headline">Apache PDFBox & POI
 
               
             
@@ -426,46 +427,16 @@
                 
               
 
-              <time title="Created: 2019-02-27 19:46:22" itemprop="dateCreated datePublished" datetime="2019-02-27T19:46:22+08:00">2019-02-27</time>
+              <time title="Created: 2019-11-18 15:02:19 / Modified: 15:06:10" itemprop="dateCreated datePublished" datetime="2019-11-18T15:02:19+08:00">2019-11-18</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-02-28 13:38:57" itemprop="dateModified" datetime="2019-02-28T13:38:57+08:00">2019-02-28</time>
               
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hello/" itemprop="url" rel="index"><span itemprop="name">Hello</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -502,9 +473,36 @@
       
 
       
-        <p>Theme NexT<br><a id="more"></a></p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>当前目录为博客所在目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></p>
-<h3 id="NexT"><a href="#NexT" class="headerlink" title="NexT"></a>NexT</h3><p><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">Elegant Theme for Hexo</a></p>
+        <p><blockquote class="blockquote-center">.pdf 和 .docx 文件创建</blockquote><br><a id="more"></a></p>
+<h3 id="创建-pdf"><a href="#创建-pdf" class="headerlink" title="创建 pdf"></a>创建 pdf</h3><ul>
+<li>使用工具 <a href="https://pdfbox.apache.org/" target="_blank" rel="noopener">Apache PDFBox</a></li>
+<li>IDEA 依赖 jar<ul>
+<li><code>fontbox-2.0.17.jar</code> <code>pdfbox-2.0.17.jar</code> <code>pdfbox-tools-2.0.17.jar</code> <code>preflight-2.0.17.jar</code> <code>xmpbox-2.0.17.jar</code> <code>commons-logging-1.2.jar</code></li>
+</ul>
+</li>
+<li><p>可参考链接</p>
+<blockquote>
+<p><a href="https://www.tutorialspoint.com/pdfbox/pdfbox_environment.htm" target="_blank" rel="noopener">https://www.tutorialspoint.com/pdfbox/pdfbox_environment.htm</a></p>
+</blockquote>
+</li>
+<li><p>代码(创建带有一个空白页的pdf)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.apache.pdfbox.pdmodel.PDDocument;</span><br><span class="line"><span class="keyword">import</span> org.apache.pdfbox.pdmodel.PDPage;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">pdfBox</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">createPDF</span><span class="params">(String savePath, String fileName)</span> </span>&#123;</span><br><span class="line">        PDDocument pdfFile = <span class="keyword">new</span> PDDocument();</span><br><span class="line">        String pathSeparator = System.getProperty(<span class="string">"file.separator"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!fileName.endsWith(<span class="string">".pdf"</span>)) &#123;</span><br><span class="line">            fileName += <span class="string">".pdf"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!savePath.endsWith(pathSeparator)) &#123;</span><br><span class="line">            savePath += pathSeparator;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// 加入空页面</span></span><br><span class="line">            PDPage blankPage = <span class="keyword">new</span> PDPage();</span><br><span class="line">            pdfFile.addPage(blankPage);</span><br><span class="line">            </span><br><span class="line">            pdfFile.save(savePath + fileName);</span><br><span class="line">            pdfFile.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="创建-docx"><a href="#创建-docx" class="headerlink" title="创建 docx"></a>创建 docx</h3><ul>
+<li>使用工具 <a href="http://poi.apache.org/download.html" target="_blank" rel="noopener">Apache POI</a></li>
+<li>IDEA 依赖 jar<ul>
+<li><code>poi-4.1.1.jar</code> <code>poi-ooxml-4.1.1.jar</code> <code>poi-ooxml-schemas-4.1.1.jar</code> <code>xmlbeans-3.1.0.jar</code> <code>commons-compress-1.19.jar</code> <code>commons-logging-1.2.jar</code></li>
+</ul>
+</li>
+<li><p>可参考链接</p>
+<blockquote>
+<p><a href="https://www.w3cschool.cn/apache_poi_word/apache_poi_word_overview.html" target="_blank" rel="noopener">https://www.w3cschool.cn/apache_poi_word/apache_poi_word_overview.html</a><br><a href="https://houbb.github.io/2019/02/14/poi-word-02-quick-start" target="_blank" rel="noopener">https://houbb.github.io/2019/02/14/poi-word-02-quick-start</a></p>
+</blockquote>
+</li>
+<li><p>代码(创建空白的docx)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.poi.xwpf.usermodel.XWPFDocument;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">docBox</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">createDoc</span><span class="params">(String savePath, String fileName)</span> </span>&#123;</span><br><span class="line">        XWPFDocument document = <span class="keyword">new</span> XWPFDocument();</span><br><span class="line">        FileOutputStream out;</span><br><span class="line">        String pathSeparator = System.getProperty(<span class="string">"file.separator"</span>);</span><br><span class="line">        <span class="keyword">if</span> (!fileName.endsWith(<span class="string">".docx"</span>)) &#123;</span><br><span class="line">            fileName += <span class="string">".docx"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!savePath.endsWith(pathSeparator)) &#123;</span><br><span class="line">            savePath += pathSeparator;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            out = <span class="keyword">new</span> FileOutputStream(<span class="keyword">new</span> File(savePath + fileName));</span><br><span class="line">            document.write(out);</span><br><span class="line">            out.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
 
       
     </div>
@@ -526,6 +524,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/FileConvert/" rel="tag"># FileConvert</a>
+          
+        </div>
+      
 
       
       
@@ -535,8 +539,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/27/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/07/26/Doc2Docx/" rel="next" title="Doc2Docx">
+                <i class="fa fa-chevron-left"></i> Doc2Docx
               </a>
             
           </div>
@@ -544,10 +548,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/28/HMM/" rel="prev" title="隐马尔可夫模型">
-                隐马尔可夫模型 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -690,7 +690,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NexT"><span class="nav-number">2.</span> <span class="nav-text">NexT</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-pdf"><span class="nav-number">1.</span> <span class="nav-text">创建 pdf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-docx"><span class="nav-number">2.</span> <span class="nav-text">创建 docx</span></a></li></ol></div>
             
 
           </div>
