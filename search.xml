@@ -59,7 +59,7 @@
   <entry>
     <title><![CDATA[Hello NexT]]></title>
     <url>%2F2019%2F02%2F27%2FHelloNexT%2F</url>
-    <content type="text"><![CDATA[Theme NexT 安装当前目录为博客所在目录1git clone https://github.com/iissnan/hexo-theme-next themes/next NexTElegant Theme for Hexo]]></content>
+    <content type="text"><![CDATA[Theme NexT 安装当前目录为博客所在目录1git clone https://github.com/iissnan/hexo-theme-next themes/next 数学公式正常显示 替换默认渲染引擎 12npm uninstall hexo-renderer-marked --savenpm install hexo-renderer-kramed --save 解决语义冲突，找到node_modules/kramed/lib/rules/inline.js，对 inline 变量作出修改 1234//escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,escape: /^\\([`*\[\]()#$+\-.!_&gt;])/,//em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/, NexTElegant Theme for Hexo]]></content>
       <categories>
         <category>Hello</category>
       </categories>
