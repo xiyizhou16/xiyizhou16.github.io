@@ -136,7 +136,7 @@
 <meta property="og:description" content="Python 代码计算立方体与线段交点">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://pic.imgdb.cn/item/5f533a91160a154a67bc76ef.png">
-<meta property="og:updated_time" content="2020-09-05T10:31:31.797Z">
+<meta property="og:updated_time" content="2020-09-06T13:36:01.436Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="立方体与线段交点计算">
 <meta name="twitter:description" content="Python 代码计算立方体与线段交点">
@@ -390,7 +390,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xiyizhou16">
       <meta itemprop="description" content="Personal Blog">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://pic.imgdb.cn/item/5f54e5dc160a154a67200007.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -428,12 +428,24 @@
                 
               
 
-              <time title="Created: 2020-09-05 12:05:56 / Modified: 18:31:31" itemprop="dateCreated datePublished" datetime="2020-09-05T12:05:56+08:00">2020-09-05</time>
+              <time title="Created: 2020-09-05 12:05:56" itemprop="dateCreated datePublished" datetime="2020-09-05T12:05:56+08:00">2020-09-05</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2020-09-06 21:36:01" itemprop="dateModified" datetime="2020-09-06T21:36:01+08:00">2020-09-06</time>
               
             
           </span>
@@ -506,7 +518,7 @@
 <li><code>direction[i] == 0</code> 意味着线段起点和终点的 i 轴坐标 <code>coord[i]</code> 相等，因而通过 <code>LineSegment.origin[i]</code> 与立方体两个对角顶点的 i 轴坐标作比较确定线段是否在立方体外，如果确认在外面则没有交点</li>
 </ul>
 </li>
-<li>常规处理先以二维情况作为说明，如图所示<br><img src="https://pic.imgdb.cn/item/5f533a91160a154a67bc76ef.png" alt="cube_intersect_line"></li>
+<li>常规处理先以二维情况作为说明，如图所示<br><img src="https://pic.imgdb.cn/item/5f533a91160a154a67bc76ef.png" alt="python-cube_intersect_line"></li>
 <li>求得二维矩形与线段的交点<ul>
 <li>如上图矩形存在两条边位于表达式为 <code>x = const</code> 的直线上，求出线段与这两条直线的交点。这两个交点的计算仅需要使用线段 <code>direction</code> 和 <code>origin</code> 对应于 x 轴的分量，可计算得到 $t0_x$ 和 $t1_x$，其中 $t0_x$ 相对较小(即距离线段起点更近)</li>
 <li>类似可求得 $t0_y$ 和 $t1_y$。若计算的是二维矩形与直线的交点，则 $t_0$ 中的较大者对应点即为交点，而 $t_1$ 中的较小点为交点。存在限制条件，若 $t_0 &gt; t_1$ 则无交点</li>
@@ -626,6 +638,8 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://pic.imgdb.cn/item/5f54e5dc160a154a67200007.jpg" alt="xiyizhou16">
             
               <p class="site-author-name" itemprop="name">xiyizhou16</p>
               <p class="site-description motion-element" itemprop="description">Personal Blog</p>
