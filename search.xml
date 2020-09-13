@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[数字信号处理随记]]></title>
+    <url>%2F2020%2F09%2F13%2F%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E9%9A%8F%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[数字信号处理 学习随记]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[深度学习随记]]></title>
     <url>%2F2020%2F09%2F08%2F%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0%2F</url>
-    <content type="text"><![CDATA[深度学习 学习随记]]></content>
+    <content type="text"><![CDATA[深度学习 学习随记 基础概念损失函数 0-1 损失函数(0-1 Loss Function) 模型在训练集上的错误率 不连续且倒数L\big(y, f(\vec{x}; \theta)\big) = \left\{ \begin{array}{ll} 0 & \textrm{if $y = f(\vec{x}; \theta)$}\\ 1 & \textrm{if $y \ne f(\vec{x}; \theta)$}\\ \end{array} \right. 平方损失函数(Quadratic Loss Function) 通常不适用于分类问题L\big(y, f(\vec{x}; \theta)\big) = \frac{1}{2}\Big(y - f(\vec{x}; \theta)\Big)^2 交叉熵损失函数(Cross-Entropy Loss Function)L\big(y, f(\vec{x}; \theta)\big) = -y\:\mathrm{log}f(\vec{x}; \theta) 最大后验估计(Maximum A Posteriori Estimation, MAP) $x$ 为随机变量，其采样分布的条件概率函数为 $f(x | \theta)$ 假设参数 $\theta$ 存在先验分布，其概率密度函数为 $g(\theta)$，将 $\theta$ 视为贝叶斯统计中的一个随机变量，则f(\theta|x)=\frac{f(x|\theta)\:g(\theta)}{\int_\Theta f(x|\vartheta)\:g(\vartheta)d\vartheta} 计算 $\theta$ 的最大似然估计\theta_{MAP}(x)=\mathrm{arg}\:\mathrm{max}\:f(\theta|x)=\mathrm{arg}\:\mathrm{max}\:\frac{f(x|\theta)\:g(\theta)}{\int_\Theta f(x|\vartheta)\:g(\vartheta)d\vartheta}=\mathrm{arg}\:\mathrm{max}\:f(x|\theta)\:g(\theta) 矩阵乘积 Hadamard Product[\boldsymbol{A}\odot\boldsymbol{B}]_{mn}=a_{mn}b_{mn} Kronecker Product[\boldsymbol{A}\otimes\boldsymbol{B}]= \left[ \begin{array}{ccc} a_{11}\boldsymbol{B} & a_{12}\boldsymbol{B} & \ldots \\ a_{21}\boldsymbol{B} & a_{22}\boldsymbol{B} & \ldots \\ \vdots & \vdots & \ddots \end{array} \right] Outer Product $\vec{a}\in\mathbb{R}^M,\quad\vec{b}\in\mathbb{R}^N$\vec{a}\otimes\vec{b}= \left[ \begin{array}{ccc} a_{1}b_{1} & a_{1}b_{2} & \ldots \\ a_{2}b_{1} & a_{2}b_{2} & \ldots \\ \vdots & \vdots & \ddots \end{array} \right] 矩阵分解 奇异值分解 $\boldsymbol{A}$ 为实的 $m\times n$ 矩阵，且 $r(\boldsymbol{A})=r$，则存在 $m$ 阶正交矩阵 $\boldsymbol{U}$ 和 $n$ 阶正交矩阵 $\boldsymbol{V}$ 使得 $\boldsymbol{A}=\boldsymbol{U}\boldsymbol{\Sigma}\boldsymbol{V}^{\mathrm{T}}$，其中 $\boldsymbol{\Sigma}=\left[ \begin{array}{ccc}\sigma_1 &amp; &amp; &amp;\\&amp; \sigma_2 &amp; &amp;\\&amp; &amp; \ddots &amp;\\&amp; &amp; &amp; \sigma_r\\&amp;\end{array} \right]$，满足 $\sigma_1\ge\sigma_2\ge\cdots\ge\sigma_r&gt;0$ $\boldsymbol{\Sigma}$ 的对角线元素为 $\boldsymbol{A}$ 的奇异值，$\boldsymbol{A}$ 的非零奇异值为 $\boldsymbol{AA}^{\mathrm{T}}$ 或者 $\boldsymbol{A}^{\mathrm{T}}\boldsymbol{A}$ 的非零特征值的平方根 相关函数 Softmax 函数 对向量进行归一化，凸显其中最大的值并抑制远低于最大值的其他分量 对于$K$个标量 $x_1, x_2, \cdots ,x_K$z_k = \mathrm{softmax}(x_k)=\frac{\mathrm{exp}(x_k)}{\sum^K_{i=1}\mathrm{exp}(x_i)} 理论Pytorch 参考资料:\神经网络与深度学习\线性代数与几何(下)\维基百科]]></content>
       <categories>
-        <category>Python</category>
+        <category>随记</category>
       </categories>
       <tags>
         <tag>AI</tag>
@@ -15,7 +23,7 @@
   <entry>
     <title><![CDATA[随笔2020]]></title>
     <url>%2F2020%2F09%2F06%2F%E9%9A%8F%E7%AC%942020%2F</url>
-    <content type="text"><![CDATA[2020年 日常记录 2020-9-6 尝试将博客迁移至 Hugo，发现公式显示也存在问题 2020-9-8 整理了微信联系人]]></content>
+    <content type="text"><![CDATA[2020年 日常记录 2020-9-6 尝试将博客迁移至 Hugo，发现公式显示也存在问题 2020-9-8 整理了微信联系人 2020-9-13 降噪耳机，略有效果]]></content>
       <categories>
         <category>随笔</category>
       </categories>

@@ -136,7 +136,7 @@
 <meta property="og:site_name" content="xiyizhou">
 <meta property="og:description" content="深度学习 学习随记">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-09-08T08:42:10.910Z">
+<meta property="og:updated_time" content="2020-09-13T13:30:02.541Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深度学习随记">
 <meta name="twitter:description" content="深度学习 学习随记">
@@ -427,12 +427,24 @@
                 
               
 
-              <time title="Created: 2020-09-08 16:25:10 / Modified: 16:42:10" itemprop="dateCreated datePublished" datetime="2020-09-08T16:25:10+08:00">2020-09-08</time>
+              <time title="Created: 2020-09-08 16:25:10" itemprop="dateCreated datePublished" datetime="2020-09-08T16:25:10+08:00">2020-09-08</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2020-09-13 21:30:02" itemprop="dateModified" datetime="2020-09-13T21:30:02+08:00">2020-09-13</time>
               
             
           </span>
@@ -449,7 +461,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随记/" itemprop="url" rel="index"><span itemprop="name">随记</span></a></span>
 
                 
                 
@@ -492,6 +504,61 @@
 
       
         <p><blockquote class="blockquote-center">深度学习 学习随记</blockquote><br><a id="more"></a></p>
+<h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><h4 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h4><ul>
+<li>0-1 损失函数(0-1 Loss Function)<ul>
+<li>模型在训练集上的错误率</li>
+<li>不连续且倒数<script type="math/tex; mode=display">L\big(y, f(\vec{x}; \theta)\big) = \left\{ \begin{array}{ll}
+0 & \textrm{if $y = f(\vec{x}; \theta)$}\\
+1 & \textrm{if $y \ne f(\vec{x}; \theta)$}\\
+\end{array} \right.</script></li>
+</ul>
+</li>
+<li>平方损失函数(Quadratic Loss Function)<ul>
+<li>通常不适用于分类问题<script type="math/tex; mode=display">L\big(y, f(\vec{x}; \theta)\big) = \frac{1}{2}\Big(y - f(\vec{x}; \theta)\Big)^2</script></li>
+</ul>
+</li>
+<li>交叉熵损失函数(Cross-Entropy Loss Function)<script type="math/tex; mode=display">L\big(y, f(\vec{x}; \theta)\big) = -y\:\mathrm{log}f(\vec{x}; \theta)</script></li>
+</ul>
+<h4 id="最大后验估计-Maximum-A-Posteriori-Estimation-MAP"><a href="#最大后验估计-Maximum-A-Posteriori-Estimation-MAP" class="headerlink" title="最大后验估计(Maximum A Posteriori Estimation, MAP)"></a>最大后验估计(Maximum A Posteriori Estimation, MAP)</h4><ul>
+<li>$x$ 为随机变量，其采样分布的条件概率函数为 $f(x | \theta)$</li>
+<li>假设参数 $\theta$ 存在先验分布，其概率密度函数为 $g(\theta)$，将 $\theta$ 视为贝叶斯统计中的一个随机变量，则<script type="math/tex; mode=display">f(\theta|x)=\frac{f(x|\theta)\:g(\theta)}{\int_\Theta f(x|\vartheta)\:g(\vartheta)d\vartheta}</script></li>
+<li>计算 $\theta$ 的最大似然估计<script type="math/tex; mode=display">\theta_{MAP}(x)=\mathrm{arg}\:\mathrm{max}\:f(\theta|x)=\mathrm{arg}\:\mathrm{max}\:\frac{f(x|\theta)\:g(\theta)}{\int_\Theta f(x|\vartheta)\:g(\vartheta)d\vartheta}=\mathrm{arg}\:\mathrm{max}\:f(x|\theta)\:g(\theta)</script></li>
+</ul>
+<h4 id="矩阵乘积"><a href="#矩阵乘积" class="headerlink" title="矩阵乘积"></a>矩阵乘积</h4><ul>
+<li>Hadamard Product<script type="math/tex; mode=display">[\boldsymbol{A}\odot\boldsymbol{B}]_{mn}=a_{mn}b_{mn}</script></li>
+<li>Kronecker Product<script type="math/tex; mode=display">[\boldsymbol{A}\otimes\boldsymbol{B}]=
+\left[ \begin{array}{ccc}
+a_{11}\boldsymbol{B} & a_{12}\boldsymbol{B} & \ldots \\
+a_{21}\boldsymbol{B} & a_{22}\boldsymbol{B} & \ldots \\
+\vdots & \vdots & \ddots
+\end{array} \right]</script></li>
+<li>Outer Product<ul>
+<li>$\vec{a}\in\mathbb{R}^M,\quad\vec{b}\in\mathbb{R}^N$<script type="math/tex; mode=display">\vec{a}\otimes\vec{b}=
+\left[ \begin{array}{ccc}
+a_{1}b_{1} & a_{1}b_{2} & \ldots \\
+a_{2}b_{1} & a_{2}b_{2} & \ldots \\
+\vdots & \vdots & \ddots
+\end{array} \right]</script></li>
+</ul>
+</li>
+</ul>
+<h4 id="矩阵分解"><a href="#矩阵分解" class="headerlink" title="矩阵分解"></a>矩阵分解</h4><ul>
+<li>奇异值分解<ul>
+<li>$\boldsymbol{A}$ 为实的 $m\times n$ 矩阵，且 $r(\boldsymbol{A})=r$，则存在 $m$ 阶正交矩阵 $\boldsymbol{U}$ 和 $n$ 阶正交矩阵 $\boldsymbol{V}$ 使得 $\boldsymbol{A}=\boldsymbol{U}\boldsymbol{\Sigma}\boldsymbol{V}^{\mathrm{T}}$，其中 $\boldsymbol{\Sigma}=<br>\left[ \begin{array}{ccc}<br>\sigma_1 &amp; &amp; &amp;\\<br>&amp; \sigma_2 &amp; &amp;\\<br>&amp; &amp; \ddots &amp;\\<br>&amp; &amp; &amp; \sigma_r\\<br>&amp;<br>\end{array} \right]$，满足 $\sigma_1\ge\sigma_2\ge\cdots\ge\sigma_r&gt;0$</li>
+<li>$\boldsymbol{\Sigma}$ 的对角线元素为 $\boldsymbol{A}$ 的奇异值，$\boldsymbol{A}$ 的非零奇异值为 $\boldsymbol{AA}^{\mathrm{T}}$ 或者 $\boldsymbol{A}^{\mathrm{T}}\boldsymbol{A}$ 的非零特征值的平方根</li>
+</ul>
+</li>
+</ul>
+<h4 id="相关函数"><a href="#相关函数" class="headerlink" title="相关函数"></a>相关函数</h4><ul>
+<li>Softmax 函数<ul>
+<li>对向量进行归一化，凸显其中最大的值并抑制远低于最大值的其他分量</li>
+<li>对于$K$个标量 $x_1, x_2, \cdots ,x_K$<script type="math/tex; mode=display">z_k = \mathrm{softmax}(x_k)=\frac{\mathrm{exp}(x_k)}{\sum^K_{i=1}\mathrm{exp}(x_i)}</script></li>
+</ul>
+</li>
+</ul>
+<h3 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h3><h3 id="Pytorch"><a href="#Pytorch" class="headerlink" title="Pytorch"></a>Pytorch</h3><blockquote>
+<p>参考资料:\<br><a href="https://nndl.github.io/" target="_blank" rel="noopener">神经网络与深度学习</a>\<br><a href="https://book.douban.com/subject/3546879/" target="_blank" rel="noopener">线性代数与几何(下)</a>\<br><a href="https://www.wikipedia.org/" target="_blank" rel="noopener">维基百科</a></p>
+</blockquote>
 
       
     </div>
@@ -540,6 +607,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2020/09/13/数字信号处理随记/" rel="prev" title="数字信号处理随记">
+                数字信号处理随记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -582,8 +653,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -600,7 +680,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -621,7 +701,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -704,6 +786,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础概念"><span class="nav-number">1.</span> <span class="nav-text">基础概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#损失函数"><span class="nav-number">1.1.</span> <span class="nav-text">损失函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最大后验估计-Maximum-A-Posteriori-Estimation-MAP"><span class="nav-number">1.2.</span> <span class="nav-text">最大后验估计(Maximum A Posteriori Estimation, MAP)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵乘积"><span class="nav-number">1.3.</span> <span class="nav-text">矩阵乘积</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵分解"><span class="nav-number">1.4.</span> <span class="nav-text">矩阵分解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关函数"><span class="nav-number">1.5.</span> <span class="nav-text">相关函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#理论"><span class="nav-number">2.</span> <span class="nav-text">理论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pytorch"><span class="nav-number">3.</span> <span class="nav-text">Pytorch</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
