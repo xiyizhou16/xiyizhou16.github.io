@@ -136,7 +136,7 @@
 <meta property="og:site_name" content="xiyizhou">
 <meta property="og:description" content="Tom, Dick, and Mary Discover the DFT 这篇文章对数字信号处理中离散傅里叶变换 (DFT) 进行了介绍，展示了其与傅里叶变换 (FT) 的联系。本文为该文章的阅读笔记">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-11-12T05:30:54.786Z">
+<meta property="og:updated_time" content="2020-11-12T07:03:39.510Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tom, Dick, and Mary Discover the DFT 阅读笔记">
 <meta name="twitter:description" content="Tom, Dick, and Mary Discover the DFT 这篇文章对数字信号处理中离散傅里叶变换 (DFT) 进行了介绍，展示了其与傅里叶变换 (FT) 的联系。本文为该文章的阅读笔记">
@@ -444,7 +444,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2020-11-12 13:30:54" itemprop="dateModified" datetime="2020-11-12T13:30:54+08:00">2020-11-12</time>
+                <time title="Modified: 2020-11-12 15:03:39" itemprop="dateModified" datetime="2020-11-12T15:03:39+08:00">2020-11-12</time>
               
             
           </span>
@@ -559,7 +559,7 @@
 <p>对于使用计算机进行谱分析，如果有一个变换能够建立频域采样和时域采样之间的联系，那这个变换将会十分实用。所以 Onward to the DFT</p>
 <h3 id="Onward-to-the-DFT"><a href="#Onward-to-the-DFT" class="headerlink" title="Onward to the DFT"></a>Onward to the DFT</h3><script type="math/tex; mode=display">x_3(t) = (0.9)^{-1000t}[u(t)-u(t-0.0151)] \tag{16}</script><p>其中 $u(t)$ 为单位阶跃信号，因为 $x_3(t)$ 时域宽度有限，故其频域带宽无限。</p>
 <p>此时以 $T_s=1ms$ 获得了N个时域的采样 $x_3(0), x_3(T_s)\dots x_3\big((N-1)T_s\big)$，并希望通过这一系列时域采样获得 $X_3(f)$ 的频域采样值。</p>
-<p>现在根据这一系列时域采样值虽然无法得到 $X_3(f)$，但是可以类似于式(13)计算出 $X_3(f)$ 发生混叠的周期延拓 $Y(f)$，显然 $Y(f)$ 周期为$f_s$。</p>
+<p>现在根据这一系列时域采样值虽然无法得到 $X_3(f)$，但是可以类似于式(13)计算出 $X_3(f)$ 发生混叠的周期延拓 $Y(f)$，显然 $Y(f)$ 周期为 $f_s$。</p>
 <script type="math/tex; mode=display">Y(f) = \frac{1}{f_s} \sum^{N-1}_{n=0}x_3(nT_s)e^{-j2\pi nT_s f} \tag{17}</script><p>构造 $Y_3(f)$ </p>
 <script type="math/tex; mode=display">
 Y_3(f) = \left\{ 
@@ -567,7 +567,7 @@ Y_3(f) = \left\{
     Y(f),\qquad -f_s/2 \le f \le f_s/2\\
     0,\qquad otherwise
 \end{array} \tag{18}
-\right.</script><p>令 $y_3(t)$ 为 $Y_3(f)$ 对应的时域信号，显然 $y_3(t)$ 在时域无限长。不过仍然构建$y_3(t)$发生混叠的时域周期延拓。 </p>
+\right.</script><p>令 $y_3(t)$ 为 $Y_3(f)$ 对应的时域信号，显然 $y_3(t)$ 在时域无限长。不过仍然构建 $y_3(t)$ 发生混叠的时域周期延拓。 </p>
 <script type="math/tex; mode=display">w(t) = \sum^{\infty}_{i=-\infty}y_3(t-iT_w) \tag{19}</script><p>其中 $T_w$ 应为 $T_s$ 的整数倍，即 </p>
 <script type="math/tex; mode=display">T_w = MT_s \quad or \quad f_w = \frac{1}{MT_s} \tag{20}</script><p>因而可以写出 $w(t)$ 的傅里叶级数(FS) </p>
 <script type="math/tex; mode=display">w(t) = \sum^{\infty}_{k=-\infty} 
@@ -680,6 +680,10 @@ x_3(nT_s) = \frac{1}{N} \sum^{N-1}_{k=0} Y_{DTFT}\Big(\frac{k f_s}{N}\Big) e^{j2
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2021/03/17/随笔2021/" rel="prev" title="随笔2021">
+                随笔2021 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -749,7 +753,7 @@ x_3(nT_s) = \frac{1}{N} \sum^{N-1}_{k=0} Y_{DTFT}\Big(\frac{k f_s}{N}\Big) e^{j2
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -795,7 +799,9 @@ x_3(nT_s) = \frac{1}{N} \sum^{N-1}_{k=0} Y_{DTFT}\Big(\frac{k f_s}{N}\Big) e^{j2
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -889,7 +895,7 @@ x_3(nT_s) = \frac{1}{N} \sum^{N-1}_{k=0} Y_{DTFT}\Big(\frac{k f_s}{N}\Big) e^{j2
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
