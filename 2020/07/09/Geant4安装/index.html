@@ -143,7 +143,7 @@
 <meta property="og:image" content="https://pic.imgdb.cn/item/5f05e27014195aa594284b87.png">
 <meta property="og:image" content="https://pic.imgdb.cn/item/5f05e50a14195aa594294397.png">
 <meta property="og:image" content="https://pic.imgdb.cn/item/5f05ef1114195aa5942cf842.png">
-<meta property="og:updated_time" content="2020-11-04T03:55:49.010Z">
+<meta property="og:updated_time" content="2021-09-11T05:02:41.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Geant4 安装">
 <meta name="twitter:description" content="Win10 配置 Geant4 + OpenGL + Qt">
@@ -452,7 +452,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2020-11-04 11:55:49" itemprop="dateModified" datetime="2020-11-04T11:55:49+08:00">2020-11-04</time>
+                <time title="Modified: 2021-09-11 13:02:41" itemprop="dateModified" datetime="2021-09-11T13:02:41+08:00">2021-09-11</time>
               
             
           </span>
@@ -553,7 +553,7 @@
 </li>
 <li>设置完成完成后，参数应类似于下图。<br><img src="https://pic.imgdb.cn/item/5f05e27014195aa594284b87.png" alt="geant4-install-cmake_step2"></li>
 <li>单击 Configure 按钮，此时输出窗口中应当没有 error 或者 warning。<br><img src="https://pic.imgdb.cn/item/5f05e50a14195aa594294397.png" alt="geant4-install-cmake_step3"></li>
-<li>再单击一次 Configure 按钮，此时没有变量显示为红色，然后关闭 CMake GUI 窗口。打开 Developer Command Prompt for VS201X，该命令窗口应当能够在电脑的 <code>开始</code> -&gt; <code>Visual Studio 201X</code> 中的文件夹找到。</li>
+<li>再单击一次 Configure 按钮，此时没有变量显示为红色，然后单击 Generate 按钮，待其完成后关闭 CMake GUI 窗口。打开 Developer Command Prompt for VS201X，该命令窗口应当能够在电脑的 <code>开始</code> -&gt; <code>Visual Studio 201X</code> 中的文件夹找到。</li>
 <li>cd 至 build 文件夹下，运行 <code>cmake --build . --config Release</code> 命令，完成后运行 <code>cmake --build . --config Release --target install</code> 完成 Geant4 安装。</li>
 <li>添加 DataFiles 的环境变量，可参考 Geant4 官网的 <a href="http://geant4-userdoc.web.cern.ch/geant4-userdoc/UsersGuides/InstallationGuide/html/postinstall.html#environment-variables-for-datasets" target="_blank" rel="noopener">Postinstall Setup</a>。</li>
 <li>验证是否安装成功，可参考官网的 <a href="http://geant4-userdoc.web.cern.ch/geant4-userdoc/UsersGuides/InstallationGuide/html/quickstart.html" target="_blank" rel="noopener">How to Make an Executable Program</a> 对示例进行编译运行。示例编译完成后直接运行 exe 文件需要能够找到需要的 dll 文件的路径，可将 <code>geant4_10_06_install/bin</code> 和 <code>Qt/5.15.0/msvc2019_64/bin</code> 相应的路径添加进环境变量。</li>
