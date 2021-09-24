@@ -164,19 +164,20 @@
 
 
 
-  <script async src="//www.googletagmanager.com/gtag/js?id=[object Object]"></script>
+
+
   <script>
-    var host = window.location.hostname;
-    if (host !== "localhost" || !true) {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-WY81QKFKNX');
-    }
+    var _hmt = _hmt || [];
+    (function() {
+      var host = window.location.host;
+      if (host.indexOf("127.0.0.1") == -1 && host.indexOf("localhost") == -1) {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?1a30fbddff5120fbb430d1b0fc65d0e2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      }
+    })();
   </script>
-
-
-
 
 
 
