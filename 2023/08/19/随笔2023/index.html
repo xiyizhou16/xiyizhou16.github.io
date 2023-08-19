@@ -128,31 +128,24 @@
 
 
 
-  <meta name="description" content="核岭回归推导">
-<meta name="keywords" content="MachineLearning">
+  <meta name="description" content="2023年 日常记录">
 <meta property="og:type" content="article">
-<meta property="og:title" content="KernelRidgeRegression">
-<meta property="og:url" content="http://yoursite.com/2021/04/04/KernelRidgeRegression/index.html">
+<meta property="og:title" content="随笔2023">
+<meta property="og:url" content="http://yoursite.com/2023/08/19/随笔2023/index.html">
 <meta property="og:site_name" content="xiyizhou">
-<meta property="og:description" content="核岭回归推导">
+<meta property="og:description" content="2023年 日常记录">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://pic.imgdb.cn/item/606921318322e6675cfa2c68.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/606921318322e6675cfa2c6c.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/606921318322e6675cfa2c70.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/606921318322e6675cfa2c75.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/606921318322e6675cfa2c7d.png">
-<meta property="og:updated_time" content="2021-04-04T02:53:26.539Z">
+<meta property="og:updated_time" content="2023-08-19T15:13:54.704Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KernelRidgeRegression">
-<meta name="twitter:description" content="核岭回归推导">
-<meta name="twitter:image" content="https://pic.imgdb.cn/item/606921318322e6675cfa2c68.png">
+<meta name="twitter:title" content="随笔2023">
+<meta name="twitter:description" content="2023年 日常记录">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2021/04/04/KernelRidgeRegression/">
+  <link rel="canonical" href="http://yoursite.com/2023/08/19/随笔2023/">
 
 
 
@@ -162,7 +155,7 @@
   };
 </script>
 
-  <title>KernelRidgeRegression | xiyizhou</title>
+  <title>随笔2023 | xiyizhou</title>
   
 
 
@@ -402,7 +395,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/04/KernelRidgeRegression/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/08/19/随笔2023/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xiyizhou16">
@@ -419,7 +412,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">KernelRidgeRegression
+          <h1 class="post-title" itemprop="name headline">随笔2023
 
               
             
@@ -445,7 +438,7 @@
                 
               
 
-              <time title="Created: 2021-04-04 09:29:59 / Modified: 10:53:26" itemprop="dateCreated datePublished" datetime="2021-04-04T09:29:59+08:00">2021-04-04</time>
+              <time title="Created: 2023-08-19 23:13:00 / Modified: 23:13:54" itemprop="dateCreated datePublished" datetime="2023-08-19T23:13:00+08:00">2023-08-19</time>
             
 
             
@@ -455,6 +448,24 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Daily/" itemprop="url" rel="index"><span itemprop="name">Daily</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -484,27 +495,16 @@
       
 
       
-        <p><blockquote class="blockquote-center">核岭回归推导</blockquote><br><a id="more"></a></p>
-<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定训练集 ${(\mathbf{x}_i, y_i)}^{N}_{i=1}$，其中 $\mathbf{x}_{i} \in \mathbf{R}^d$ 而 $y_i \in \mathbf{R}$。令 $\phi$ 为 $\mathbf{R}^d \to \mathbf{R}^{m}$ 的 feature map，则核岭回归问题可如下表示:</p>
-<script type="math/tex; mode=display">\min_{\mathbf{w}\in\mathbb{R}^m}\frac{\lambda}{2}||\mathbf{w}||^2 + \sum^N_{i=1}\big(\mathbf{w}^\mathsf{T}\phi(\mathbf{x}_i) - y_i\big)^2</script><p>该问题需要推导预测函数 $f(\mathbf{x}) = \hat{\mathbf{w}}^{\mathsf{T}}\phi(\mathbf{x})$，且利用核函数 $k(\mathbf{x}, \mathbf{y})=\phi(\mathbf{x})^{\mathsf{T}}\phi(\mathbf{y})$ 使得 $f(\mathbf{x})$ 不包含 $\phi$</p>
-<p>注: 向量默认为列向量</p>
-<h3 id="f-mathbf-x-推导过程"><a href="#f-mathbf-x-推导过程" class="headerlink" title="$f(\mathbf{x})$ 推导过程"></a>$f(\mathbf{x})$ 推导过程</h3><p>对 $\mathbf{w}$ 求偏导使其等于 0</p>
-<script type="math/tex; mode=display">\lambda\mathbf{w} + 2\sum^N_{i=1}\big(\mathbf{w}^{\mathsf{T}}\phi(\mathbf{x}_i)-y_i\big)\phi(\mathbf{x}_i) = 0</script><script type="math/tex; mode=display">\hat{\mathbf{w}} = \Big(\lambda I_m + 2\sum^N_{i=1}\phi(\mathbf{x}_i)\phi(\mathbf{x}_i)^{\mathsf{T}}\Big) ^ {-1}\Big(2\sum^N_{j=1} y_i \phi(\mathbf{x}_j)\Big)</script><p>令 $\Phi$ 为 $m\times N$ 矩阵，$\mathbf{y}$ 为 $N$ 维向量</p>
-<script type="math/tex; mode=display">\Phi = \big[\phi(\mathbf{x}_1), \phi(\mathbf{x}_2), \dots, \phi(\mathbf{x}_N)\big]</script><script type="math/tex; mode=display">\mathbf{y} = \big[y_1, y_2, \dots, y_N\big]^{\mathsf{T}}</script><p>因而有</p>
-<script type="math/tex; mode=display">\sum^N_{i=1}\phi(\mathbf{x}_i)\phi(\mathbf{x}_i)^{\mathsf{T}} = \Phi\Phi^{\mathsf{T}}</script><script type="math/tex; mode=display">\sum^N_{j=1} y_i \phi(\mathbf{x}_j) = \Phi \mathbf{y}</script><p>故 $\hat{\mathbf{w}}$ 可表示为</p>
-<script type="math/tex; mode=display">\hat{\mathbf{w}} = 2\big(\lambda I_m + 2\Phi\Phi^{\mathsf{T}} \big) ^ {-1} \Phi \mathbf{y}</script><p>由 Matrix inversion lemmas，该公式的推导可参考 <a href="https://tlienart.github.io/pub/csml/mtheory/matinvlem.html" target="_blank" rel="noopener">Matrix inversion lemmas - GitHub Pages</a></p>
-<script type="math/tex; mode=display">(A−BD^{−1}C)^{−1}BD^{−1} = A^{−1}B(D−CA^{−1}B)^{−1}</script><p>令 $A = I_m,\; B = 2\Phi,\; C = -\Phi^{\mathsf{T}},\; D^{-1} = \lambda^{-1}I_N$</p>
-<p>因而</p>
-<script type="math/tex; mode=display">\big(I_m + 2\lambda^{-1}\Phi\Phi^{\mathsf{T}}\big)^{-1}2\lambda\Phi = 2\Phi \big(\lambda I_N + 2\Phi^{\mathsf{T}}\Phi\big)^{-1}</script><script type="math/tex; mode=display">\hat{\mathbf{w}} = 2\Phi \big(\lambda I_N + 2\Phi^{\mathsf{T}}\Phi\big)^{-1} \mathbf{y}</script><p>对于预测</p>
-<script type="math/tex; mode=display">
-\begin{split}
-    f(\mathbf{x})
-    &= \hat{\mathbf{w}}^{\mathsf{T}} \phi(\mathbf{x}) \\
-    &= 2\mathbf{y}^{\mathsf{T}} \big(\lambda I_N + 2\Phi^{\mathsf{T}}\Phi\big)^{-1} \Phi^{\mathsf{T}} \phi(\mathbf{x}) \\
-    &= 2\mathbf{y}^{\mathsf{T}} \big(\lambda I_N + 2K \big)^{-1} \kappa(\mathbf{x})
-\end{split}</script><p>其中 $K$ 为 $N\times N$ 矩阵</p>
-<script type="math/tex; mode=display">K_{ij} = \phi(\mathbf{x}_i)^{\mathsf{T}}\phi(\mathbf{x}_j) = k(\mathbf{x}_i, \mathbf{x}_j)</script><script type="math/tex; mode=display">\kappa(\mathbf{x}) = \big[\phi(\mathbf{x}_1)^{\mathsf{T}}\phi(\mathbf{x}), \dots, \phi(\mathbf{x}_N)^{\mathsf{T}}\phi(\mathbf{x}) \big]^{\mathsf{T}} = \big[k(\mathbf{x}_1, \mathbf{x}), \dots, k(\mathbf{x}_N, \mathbf{x})\big]^{\mathsf{T}}</script><h3 id="Python-代码"><a href="#Python-代码" class="headerlink" title="Python 代码"></a>Python 代码</h3><p>以下代码仅适用于 $x\in\mathbb{R}$ 的情形<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">target_function</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">-5</span> + <span class="number">20</span> * x - <span class="number">16</span> * x ** <span class="number">2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gene_dataset</span><span class="params">()</span>:</span></span><br><span class="line">    dataset_size = <span class="number">30</span></span><br><span class="line">    np.random.seed(<span class="number">2021</span>)</span><br><span class="line">    data_x = np.random.uniform(<span class="number">0</span>, <span class="number">1</span>, dataset_size)</span><br><span class="line">    data_epsilon = np.random.normal(<span class="number">0</span>, <span class="number">1</span>, dataset_size)</span><br><span class="line">    data_y = target_function(data_x) + data_epsilon * <span class="number">2</span> / <span class="number">5</span></span><br><span class="line">    <span class="keyword">return</span> data_x, data_y</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">KernelRidge</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, x, y, lam, kernel_function)</span>:</span></span><br><span class="line">        self.x, self.kernel_function = x, kernel_function</span><br><span class="line"></span><br><span class="line">        y_t = np.mat(y)</span><br><span class="line">        dataset_size = len(x)</span><br><span class="line">        lam_i = lam * np.mat(np.identity(dataset_size))</span><br><span class="line">        k = np.mat(np.zeros((dataset_size, dataset_size)))</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, dataset_size):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>, dataset_size):</span><br><span class="line">                k[i, j] = kernel_function(x[i], x[j])</span><br><span class="line"></span><br><span class="line">        self.coefficient_vec = <span class="number">2</span> * y_t * np.linalg.inv(lam_i + <span class="number">2</span> * k)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">predict</span><span class="params">(self, x)</span>:</span></span><br><span class="line">        prediction_y = np.zeros(len(x))</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(x)):</span><br><span class="line">            kappa = np.mat(np.zeros(len(self.x))).T</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>, len(self.x)):</span><br><span class="line">                kappa[j, <span class="number">0</span>] = self.kernel_function(self.x[j], x[i])</span><br><span class="line">            prediction_y[i] = self.coefficient_vec * kappa</span><br><span class="line">        <span class="keyword">return</span> prediction_y</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">kernel0</span><span class="params">(x, y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span> + x * y</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">kernel1</span><span class="params">(x, y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> (<span class="number">1</span> + x * y) ** <span class="number">2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">kernel2</span><span class="params">(x, y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> (<span class="number">1</span> + x * y) ** <span class="number">9</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">kernel3</span><span class="params">(x, y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> min(x, y)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">kernel4</span><span class="params">(x, y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> math.exp(-(x - y) ** <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    x, y = gene_dataset()</span><br><span class="line">    kernel_ridge = KernelRidge(x, y, <span class="number">0.01</span>, kernel0)</span><br><span class="line"></span><br><span class="line">    x_prediction = np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">100</span>)</span><br><span class="line">    y_prediction = kernel_ridge.predict(x_prediction)</span><br><span class="line"></span><br><span class="line">    plt.scatter(x, y)</span><br><span class="line">    plt.plot(x_prediction, y_prediction, <span class="string">'g'</span>)</span><br><span class="line">    plt.plot(x_prediction, target_function(x_prediction), <span class="string">'r'</span>)</span><br><span class="line">    plt.show()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure></p>
-<p>下图为不同核函数与 $\lambda$ 取值时预测结果，红线为目标函数，蓝色散点为目标函数加入高斯噪声后生成的数据集，绿线为岭回归拟合曲线。<br><img src="https://pic.imgdb.cn/item/606921318322e6675cfa2c68.png" alt="kernel-ridge-regression_prediction_kernel_(1+xy)"><br><img src="https://pic.imgdb.cn/item/606921318322e6675cfa2c6c.png" alt="kernel-ridge-regression_prediction_kernel_(1+xy)^2"><br><img src="https://pic.imgdb.cn/item/606921318322e6675cfa2c70.png" alt="kernel-ridge-regression_prediction_kernel_(1+xy)^9"><br><img src="https://pic.imgdb.cn/item/606921318322e6675cfa2c75.png" alt="kernel-ridge-regression_prediction_kernel_exp(-(x-y)^2)"><br><img src="https://pic.imgdb.cn/item/606921318322e6675cfa2c7d.png" alt="kernel-ridge-regression_prediction_kernel_min(x,y)"></p>
+        <p><blockquote class="blockquote-center">2023年 日常记录</blockquote><br><a id="more"></a></p>
+<ul>
+<li>2023-8-19<ul>
+<li>重新捡回我的博客，希望之后能一直写下去 :）</li>
+<li>叹气，就不吐槽了</li>
+<li>装了一些此前失效的软件，明天继续把环境整理一下</li>
+<li>把博客重新传上去并不顺利，因为本地的博客环境一直保持不变，NodeJS 版本过高导致报错，最后选择了 v12</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -526,12 +526,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/MachineLearning/" rel="tag"># MachineLearning</a>
-          
-        </div>
-      
 
       
       
@@ -541,8 +535,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/03/17/随笔2021/" rel="next" title="随笔2021">
-                <i class="fa fa-chevron-left"></i> 随笔2021
+              <a href="/2022/03/12/随笔2022/" rel="next" title="随笔2022">
+                <i class="fa fa-chevron-left"></i> 随笔2022
               </a>
             
           </div>
@@ -550,10 +544,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2022/03/12/随笔2022/" rel="prev" title="随笔2022">
-                随笔2022 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -597,17 +587,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -734,23 +715,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#f-mathbf-x-推导过程"><span class="nav-number">2.</span> <span class="nav-text">$f(\mathbf{x})$ 推导过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-代码"><span class="nav-number">3.</span> <span class="nav-text">Python 代码</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
@@ -1239,53 +1203,6 @@
   
   
 
-  
-    
-      <script type="text/x-mathjax-config">
-  
-
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      
-      equationNumbers: {
-        autoNumber: 'AMS'
-      }
-    }
-  });
-  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
-    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
-      if (data.display) {
-        var next = data.script.nextSibling;
-        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
-        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
-      }
-    });
-  });
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-      for (i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
-</script>
-<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-<style>
-.MathJax_Display {
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-</style>
-
-    
   
 
 
